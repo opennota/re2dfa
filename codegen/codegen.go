@@ -156,7 +156,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 			fmt.Fprintf(&buf, "s%d:\n", n.S)
 		}
 
-		hasEmpty := false
+		hasZeroWidth := false
 		hasNonEmpty := false
 		hasLazy := false
 		for _, t := range n.T {
@@ -165,7 +165,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 					if t.R[i] == nfa.RuneLazy {
 						hasLazy = true
 					} else {
-						hasEmpty = true
+						hasZeroWidth = true
 					}
 				} else {
 					hasNonEmpty = true
@@ -191,7 +191,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 			}
 		}
 
-		if hasEmpty {
+		if hasZeroWidth {
 			atLeastOneSwitch = true
 			fmt.Fprintln(&buf, "switch {")
 			for _, t := range n.T {
