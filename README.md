@@ -11,6 +11,8 @@ re2dfa transforms regular expressions into deterministic finite state machines a
 
     re2dfa ^a+$ main.matchAPlus string
 
+All patterns are anchored at the beginning of data, whether or not the pattern starts with `^`.
+
 # Benchmarks
 
 Regular expression:
