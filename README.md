@@ -37,3 +37,7 @@ Benchmark results (Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz):
 
     BenchmarkFSM1          300000         4049 ns/op          0 B/op        0 allocs/op
     BenchmarkRegexp1        30000        48303 ns/op        112 B/op        7 allocs/op
+
+# License
+
+re2dfa is released under the GNU General Public License version 3.0.  As a special exception to the GPLv3, you may use the parts of re2dfa output copied from re2dfa source without restriction.  Use of re2dfa makes no requirements about the license of generated code.
