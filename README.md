@@ -35,8 +35,8 @@ Regular expression:
 
 Benchmark results (Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz):
 
-    BenchmarkFSM1          300000         4049 ns/op          0 B/op        0 allocs/op
-    BenchmarkRegexp1        30000        48303 ns/op        112 B/op        7 allocs/op
+    BenchmarkFSM1-4        500000         3197 ns/op          0 B/op        0 allocs/op
+    BenchmarkRegexp1-4     100000        14057 ns/op        112 B/op        7 allocs/op
 
 # License
 
