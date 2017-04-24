@@ -154,6 +154,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 	for ni, n := range nodes {
 		if n.S != 1 || labelFirstState {
 			fmt.Fprintf(&buf, "s%d:\n", n.S)
+			fmt.Fprintf(&buf, "label=%d\n", n.S)
 		}
 
 		hasZeroWidth := false
@@ -301,7 +302,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 			%s
 			%s
 
-			func %s(s %s) (end int) {
+			func %s(s %s) (end int, label int) {
 				end = %d
 				%s
 				_, _, _ = r, rlen, i
@@ -314,6 +315,7 @@ func GoGenerate(root *dfa.Node, packageName, funcName, typ string) string {
 
 	source, err := format.Source(buf2.Bytes())
 	if err != nil {
+		fmt.Printf("Buf %s", buf2)
 		panic(err)
 	}
 
