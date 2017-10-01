@@ -5,7 +5,7 @@ re2dfa transforms regular expressions into deterministic finite state machines a
 
 # Installation
 
-    go get github.com/opennota/re2dfa
+    go get -u github.com/opennota/re2dfa
 
 # Usage
 
