@@ -33,10 +33,10 @@ Regular expression:
         <!\[CDATA\[[\s\S]*?\]\]>
     )
 
-Benchmark results (Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz):
+Benchmark results (Go 1.10, Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz):
 
-    BenchmarkFSM1-4        500000         2809 ns/op          0 B/op        0 allocs/op
-    BenchmarkRegexp1-4     100000        12640 ns/op        112 B/op        7 allocs/op
+    BenchmarkFSM1-4        500000         2778 ns/op          0 B/op        0 allocs/op
+    BenchmarkRegexp1-4     100000        12643 ns/op        112 B/op        7 allocs/op
 
 # License
 
