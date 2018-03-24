@@ -37,8 +37,7 @@ func main() {
 Options:
     -o FILE    Output to FILE instead of standard output
 
-EXAMPLE: re2dfa ^a+$ main.matchAPlus string
-`)
+EXAMPLE: re2dfa ^a+$ main.matchAPlus string`)
 	}
 	flag.Parse()
 	if len(flag.Args()) != 3 {
